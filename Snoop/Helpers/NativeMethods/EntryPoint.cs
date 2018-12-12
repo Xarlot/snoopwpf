@@ -25,9 +25,6 @@ namespace Snoop {
                 startNew = true;
                 RegistrySettings.LastVersion = currentVersion;
             }
-            #if DEBUG
-                startNew = true;
-            #endif
             if (startNew) {
                 foreach (var process in Process.GetProcessesByName("Snoop")) {
                     var currentId = Process.GetCurrentProcess().Id;
